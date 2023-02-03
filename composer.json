@@ -2,14 +2,17 @@
     "name": "hexlet/code",
     "description": "brain-games: few command line math games",
     "license": "MIT",
-    "type": "project",
+    "type": "library",
     "bin": [
         "bin/brain-games"
     ],
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+            "BrainGames\\Cli\\": "src"
+        },
+        "files": [
+            "src/Cli.php"
+        ]
     },
     "authors": [
         {
@@ -17,5 +20,7 @@
             "email": "anton2009danilov@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.17"
+    }
 }
