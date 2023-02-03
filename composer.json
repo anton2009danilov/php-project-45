@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "brain-games: few command line math games",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anton Danilov",
+            "email": "anton2009danilov@yandex.ru"
+        }
+    ],
+    "require": {}
+}
