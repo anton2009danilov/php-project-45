@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\BrainEven;
 
-use function BrainGames\BuildGame\buildGame;
+use function BrainGames\Engine\buildGame;
 use function BrainGames\Utils\generateRandomNum;
 
 function isEven($num)

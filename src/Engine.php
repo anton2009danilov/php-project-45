@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\BuildGame;
+namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
@@ -15,6 +15,15 @@ function generateBrainEvenText($num)
     return "{$description}\n{$task}";
 }
 
+function generateBrainCalcText($questData)
+{
+    [$num1, $num2, $sign] = $questData;
+    $description = 'What is the result of the expression?';
+    $task = "Question: {$num1} {$sign} {$num2}\n";
+
+    return "{$description}\n{$task}";
+}
+
 function generateQuestionText($gameName, $questData = '123')
 {
     $answerRequestStr = 'Your answer';
@@ -22,6 +31,10 @@ function generateQuestionText($gameName, $questData = '123')
     switch ($gameName) {
         case 'brain-even':
             $taskDescription = generateBrainEvenText($questData);
+            $questText = "{$taskDescription}{$answerRequestStr}";
+            break;
+        case 'brain-calc':
+            $taskDescription = generateBrainCalcText($questData);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         default:
@@ -40,7 +53,7 @@ function buildGame($gameName, $generateQuest)
         [$correctAnswer, $questData] = $generateQuest();
         $userAnswer = askQuestion(generateQuestionText($gameName, $questData));
 
-        if ($userAnswer === $correctAnswer) {
+        if (strval($userAnswer) === strval($correctAnswer)) {
             line('Correct!');
 
             if ($i === $roundsLimit) {

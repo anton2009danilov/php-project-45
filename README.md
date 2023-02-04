@@ -30,3 +30,6 @@ make install
 
 ### brain-even game demo:
 [![asciicast](https://asciinema.org/a/E9u9xfcPThbRCdVKwSGAji2VC.svg)](https://asciinema.org/a/E9u9xfcPThbRCdVKwSGAji2VC)
+
+### brain-calc game demo:
+[![asciicast](https://asciinema.org/a/BZPTXTHpeNf4cRkY2yeBQH1ow.svg)](https://asciinema.org/a/BZPTXTHpeNf4cRkY2yeBQH1ow)
