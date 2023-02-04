@@ -4,11 +4,16 @@
     "license": "MIT",
     "type": "library",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/GenerateRandomNum.php",
+            "src/BuildGame.php",
+            "src/games/BrainGames.php",
+            "src/games/BrainEven.php"
         ]
     },
     "authors": [
