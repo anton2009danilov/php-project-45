@@ -39,9 +39,10 @@ function runGame()
     $gameName = 'brain-calc';
 
     buildGame($gameName, function () {
-        $digitCapacity = 100;
-        $num1 = generateRandomNum($digitCapacity);
-        $num2 = generateRandomNum($digitCapacity / 10);
+        $num1Limit = 100;
+        $num2Limit = 10;
+        $num1 = generateRandomNum($num1Limit);
+        $num2 = generateRandomNum($num2Limit);
         $sign = generateSign();
 
         $questData = [$num1, $num2, $sign];

@@ -6,6 +6,7 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
+        "bin/brain-gcd",
         "bin/brain-calc"
     ],
     "autoload": {
@@ -15,6 +16,7 @@
             "src/Engine.php",
             "src/games/BrainGames.php",
             "src/games/BrainEven.php",
+            "src/games/BrainGreatestCommonDivisor.php",
             "src/games/BrainCalc.php"
         ]
     },

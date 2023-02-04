@@ -24,7 +24,7 @@ make install
 | ----------------------- | :-----------------------------------------------------------------------------------------------------------------------------------: |
 | ./bin/brain-even        | Start "Even number, not even number" game. Player should tell if the showed number is even by typing "yes" or "no" in a command line. |
 | ./bin/brain-calc        | Start "Make a calculation" game. Player's task is to make a simple calculation with two numbers and type the right answer.            |
-| ./bin/brain-gcd         | Start "Greatest common divider" game. Player should find the biggest common divider of two given numbers.                             |
+| ./bin/brain-gcd         | Start "Greatest common divider" game. Player should find the greatest common divider of two given numbers.                            |
 | ./bin/brain-progression | Start "Find missed number" game. Player should type a number missed in a progression.                                                 |
 | ./bin/brain-prime       | Start brain-prime game. Player should tell if showed number is prime.                                                                 |
 
@@ -33,3 +33,6 @@ make install
 
 ### brain-calc game demo:
 [![asciicast](https://asciinema.org/a/BZPTXTHpeNf4cRkY2yeBQH1ow.svg)](https://asciinema.org/a/BZPTXTHpeNf4cRkY2yeBQH1ow)
+
+### brain-gcd game demo:
+[![asciicast](https://asciinema.org/a/xkWC3g5zJLBbRmBog9Po4y3pp.svg)](https://asciinema.org/a/xkWC3g5zJLBbRmBog9Po4y3pp)

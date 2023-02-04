@@ -10,18 +10,27 @@ use function BrainGames\Cli\askQuestion;
 function generateBrainEvenText($num)
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $task = "Question: {$num}\n";
+    $task = "Question: {$num}";
 
-    return "{$description}\n{$task}";
+    return "{$description}\n{$task}\n";
 }
 
 function generateBrainCalcText($questData)
 {
     [$num1, $num2, $sign] = $questData;
     $description = 'What is the result of the expression?';
-    $task = "Question: {$num1} {$sign} {$num2}\n";
+    $task = "Question: {$num1} {$sign} {$num2}";
 
-    return "{$description}\n{$task}";
+    return "{$description}\n{$task}\n";
+}
+
+function generateBrainGCDText($questData)
+{
+    [$num1, $num2] = $questData;
+    $description = 'Find the greatest common divisor of given numbers.';
+    $task = "Question: {$num1} {$num2}";
+
+    return "{$description}\n{$task}\n";
 }
 
 function generateQuestionText($gameName, $questData = '123')
@@ -35,6 +44,10 @@ function generateQuestionText($gameName, $questData = '123')
             break;
         case 'brain-calc':
             $taskDescription = generateBrainCalcText($questData);
+            $questText = "{$taskDescription}{$answerRequestStr}";
+            break;
+        case 'brain-gcd':
+            $taskDescription = generateBrainGCDText($questData);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         default:
@@ -53,7 +66,7 @@ function buildGame($gameName, $generateQuest)
         [$correctAnswer, $questData] = $generateQuest();
         $userAnswer = askQuestion(generateQuestionText($gameName, $questData));
 
-        if (strval($userAnswer) === strval($correctAnswer)) {
+        if ((string) $userAnswer === (string) $correctAnswer) {
             line('Correct!');
 
             if ($i === $roundsLimit) {
