@@ -23,6 +23,7 @@ function runGame()
         $secretNumPosition = generateRandomNum($length - 1);
 
         $progression = [];
+        $secretNum = -1;
 
         for ($position = 0; $position < $length; $position += 1) {
             if ($position === $secretNumPosition) {
