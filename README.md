@@ -39,3 +39,6 @@ make install
 
 ### brain-progression game demo:
 [![asciicast](https://asciinema.org/a/AE78Dia4w0nn5OHZ9XAhW9WRM.svg)](https://asciinema.org/a/AE78Dia4w0nn5OHZ9XAhW9WRM)
+
+### brain-prime game demo:
+[![asciicast](https://asciinema.org/a/JLI2flMFWcidwEaIiDXLoZp8D.svg)](https://asciinema.org/a/JLI2flMFWcidwEaIiDXLoZp8D)

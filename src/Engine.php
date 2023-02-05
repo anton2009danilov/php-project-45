@@ -41,6 +41,14 @@ function generateBrainProgressionText($questString)
     return "{$description}\n{$task}\n";
 }
 
+function generateBrainPrimeText($num)
+{
+    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $task = "Question: {$num}";
+
+    return "{$description}\n{$task}\n";
+}
+
 function generateQuestionText($gameName, $questData = '123')
 {
     $answerRequestStr = 'Your answer';
@@ -48,6 +56,10 @@ function generateQuestionText($gameName, $questData = '123')
     switch ($gameName) {
         case 'brain-even':
             $taskDescription = generateBrainEvenText($questData);
+            $questText = "{$taskDescription}{$answerRequestStr}";
+            break;
+        case 'brain-prime':
+            $taskDescription = generateBrainPrimeText($questData);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         case 'brain-calc':

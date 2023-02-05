@@ -6,6 +6,7 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
+        "bin/brain-prime",
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-calc"
@@ -17,6 +18,7 @@
             "src/Engine.php",
             "src/games/BrainGames.php",
             "src/games/BrainEven.php",
+            "src/games/BrainPrime.php",
             "src/games/BrainProgression.php",
             "src/games/BrainGreatestCommonDivisor.php",
             "src/games/BrainCalc.php"
