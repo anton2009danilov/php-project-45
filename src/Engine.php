@@ -7,7 +7,7 @@ use function cli\prompt;
 use function BrainGames\Cli\sayHello;
 use function BrainGames\Cli\askQuestion;
 
-function generateBrainEvenText($num)
+function generateBrainEvenText(int $num)
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
     $task = "Question: {$num}";
@@ -15,7 +15,7 @@ function generateBrainEvenText($num)
     return "{$description}\n{$task}\n";
 }
 
-function generateBrainCalcText($questData)
+function generateBrainCalcText(array $questData)
 {
     [$num1, $num2, $sign] = $questData;
     $description = 'What is the result of the expression?';
@@ -24,7 +24,7 @@ function generateBrainCalcText($questData)
     return "{$description}\n{$task}\n";
 }
 
-function generateBrainGCDText($questData)
+function generateBrainGCDText(array $questData)
 {
     [$num1, $num2] = $questData;
     $description = 'Find the greatest common divisor of given numbers.';
@@ -33,7 +33,7 @@ function generateBrainGCDText($questData)
     return "{$description}\n{$task}\n";
 }
 
-function generateBrainProgressionText($questString)
+function generateBrainProgressionText(string $questString)
 {
     $description = 'What number is missing in the progression?';
     $task = "Question: {$questString}";
@@ -41,7 +41,7 @@ function generateBrainProgressionText($questString)
     return "{$description}\n{$task}\n";
 }
 
-function generateBrainPrimeText($num)
+function generateBrainPrimeText(int $num)
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $task = "Question: {$num}";
@@ -49,9 +49,10 @@ function generateBrainPrimeText($num)
     return "{$description}\n{$task}\n";
 }
 
-function generateQuestionText($gameName, $questData = '123')
+function generateQuestionText(string $gameName, mixed $questData)
 {
     $answerRequestStr = 'Your answer';
+    $questText = -1;
 
     switch ($gameName) {
         case 'brain-even':
@@ -81,7 +82,7 @@ function generateQuestionText($gameName, $questData = '123')
     return $questText;
 }
 
-function buildGame($gameName, $generateQuest)
+function buildGame(string $gameName, callable $generateQuest)
 {
     $roundsLimit = 3;
     $userName = sayHello();
