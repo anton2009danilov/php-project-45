@@ -36,6 +36,6 @@ function runGame()
             $newNum += $step;
         }
 
-        return [$secretNum, implode(' ', $progression)];
+        return [$secretNum, [implode(' ', $progression)]];
     });
 }

@@ -37,6 +37,6 @@ function runGame()
         $digitCapacity = 100;
         $num = generateRandomNum($digitCapacity);
 
-        return [calcAnswer($num), $num];
+        return [calcAnswer($num), [$num]];
     });
 }

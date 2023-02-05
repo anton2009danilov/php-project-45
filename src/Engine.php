@@ -49,18 +49,20 @@ function generateBrainPrimeText(int $num)
     return "{$description}\n{$task}\n";
 }
 
-function generateQuestionText(string $gameName, mixed $questData)
+function generateQuestionText(string $gameName, array $questData)
 {
     $answerRequestStr = 'Your answer';
     $questText = -1;
 
     switch ($gameName) {
         case 'brain-even':
-            $taskDescription = generateBrainEvenText($questData);
+            [$num] = $questData;
+            $taskDescription = generateBrainEvenText($num);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         case 'brain-prime':
-            $taskDescription = generateBrainPrimeText($questData);
+            [$num] = $questData;
+            $taskDescription = generateBrainPrimeText($num);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         case 'brain-calc':
@@ -72,7 +74,8 @@ function generateQuestionText(string $gameName, mixed $questData)
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         case 'brain-progression':
-            $taskDescription = generateBrainProgressionText($questData);
+            [$questString] = $questData;
+            $taskDescription = generateBrainProgressionText($questString);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         default:
