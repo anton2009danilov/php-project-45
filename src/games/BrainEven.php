@@ -5,12 +5,12 @@ namespace BrainGames\Games\BrainEven;
 use function BrainGames\Engine\buildGame;
 use function BrainGames\Utils\generateRandomNum;
 
-function isEven($num)
+function isEven(int $num)
 {
     return $num % 2 === 0;
 }
 
-function calcAnswer($num)
+function calcAnswer(int $num)
 {
     return isEven($num) ? 'yes' : 'no';
 }
