@@ -5,9 +5,10 @@ namespace BrainGames\Games\BrainCalc;
 use function BrainGames\Engine\buildGame;
 use function BrainGames\Utils\generateRandomNum;
 
-function calcAnswer($questData)
+function calcAnswer(array $questData)
 {
     [$num1, $num2, $sign] = $questData;
+    $result = -1;
 
     switch ($sign) {
         case '+':
