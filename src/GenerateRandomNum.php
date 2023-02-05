@@ -2,7 +2,7 @@
 
 namespace BrainGames\Utils;
 
-function generateRandomNum($maxValue, $minValue = 0)
+function generateRandomNum(int $maxValue, int $minValue = 0)
 {
     return rand($minValue, $maxValue);
 }
