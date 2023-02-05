@@ -5,7 +5,7 @@ namespace BrainGames\Games\BrainPrime;
 use function BrainGames\Engine\buildGame;
 use function BrainGames\Utils\generateRandomNum;
 
-function isPrime($num)
+function isPrime(int $num)
 {
     if ($num <= 1) {
         return false;
@@ -24,7 +24,7 @@ function isPrime($num)
     return true;
 }
 
-function calcAnswer($num)
+function calcAnswer(int $num)
 {
     return isPrime($num) ? 'yes' : 'no';
 }
