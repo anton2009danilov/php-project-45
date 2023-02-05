@@ -33,6 +33,14 @@ function generateBrainGCDText($questData)
     return "{$description}\n{$task}\n";
 }
 
+function generateBrainProgressionText($questString)
+{
+    $description = 'What number is missing in the progression?';
+    $task = "Question: {$questString}";
+
+    return "{$description}\n{$task}\n";
+}
+
 function generateQuestionText($gameName, $questData = '123')
 {
     $answerRequestStr = 'Your answer';
@@ -48,6 +56,10 @@ function generateQuestionText($gameName, $questData = '123')
             break;
         case 'brain-gcd':
             $taskDescription = generateBrainGCDText($questData);
+            $questText = "{$taskDescription}{$answerRequestStr}";
+            break;
+        case 'brain-progression':
+            $taskDescription = generateBrainProgressionText($questData);
             $questText = "{$taskDescription}{$answerRequestStr}";
             break;
         default:

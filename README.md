@@ -36,3 +36,6 @@ make install
 
 ### brain-gcd game demo:
 [![asciicast](https://asciinema.org/a/xkWC3g5zJLBbRmBog9Po4y3pp.svg)](https://asciinema.org/a/xkWC3g5zJLBbRmBog9Po4y3pp)
+
+### brain-progression game demo:
+[![asciicast](https://asciinema.org/a/AE78Dia4w0nn5OHZ9XAhW9WRM.svg)](https://asciinema.org/a/AE78Dia4w0nn5OHZ9XAhW9WRM)

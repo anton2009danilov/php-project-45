@@ -5,10 +5,8 @@ namespace BrainGames\Games\BrainGreatestCommonDivisor;
 use function BrainGames\Engine\buildGame;
 use function BrainGames\Utils\generateRandomNum;
 
-function calcAnswer($questData)
+function findGreatestCommonDivisor($num1, $num2)
 {
-    [$num1, $num2] = $questData;
-
     $maxDivisor = $num1 >= $num2 ? $num1 : $num2;
     $minDivisor = 1;
 
@@ -26,6 +24,13 @@ function calcAnswer($questData)
     }
 
     return (string) $result;
+}
+
+function calcAnswer($questData)
+{
+    [$num1, $num2] = $questData;
+
+    return findGreatestCommonDivisor($num1, $num2);
 }
 
 function runGame()
